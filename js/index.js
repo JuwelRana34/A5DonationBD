@@ -1,9 +1,11 @@
 const DonationBtn = document.getElementById("Donation");
 const HistoryBtn = document.getElementById("History");
-const showDonationHistory = document.getElementById("showDonationHistory");
-
 const boxContants = document.getElementById("box-contants");
+const showDonationHistory = document.getElementById("showDonationHistory");
 const myBalance = parseInt(document.getElementById("myBalance").innerText);
+const feniDonatioamount = parseInt(document.getElementById('feniDonatioamount').innerText) 
+console.log(feniDonatioamount);
+
 
 // common function
 
@@ -43,6 +45,7 @@ DonationBtn.addEventListener("click", function () {
 });
 
 // donation functionality
+
 // boxContants.addEventListener('click',function(e){
 //     const parent = e.target.parentElement
 //     // const input = parseFloat(parent.querySelector("input").value)
@@ -89,6 +92,41 @@ document.getElementById("NoakhalifBtn").addEventListener("click", function () {
     showDonationHistory.appendChild(div);
 
     document.getElementById("NoakhalifInput").value = "";
+  } else {
+    modalClose();
+  }
+});
+
+
+// card-2
+var fenifInputFundCollectionTotal = feniDonatioamount
+document.getElementById("fenifBtn").addEventListener("click", function () {
+  let fenifInput = getInputValue("fenifInput");
+
+  if (fenifInput > 0 && !isNaN(fenifInput)) {
+    fenifInputFundCollectionTotal += fenifInput;
+
+    document.getElementById("feniDonatioamount").innerText =
+    fenifInputFundCollectionTotal;
+    let remingnMyBlance = myBalance - fenifInput;
+    if (remingnMyBlance < 0) {
+       return alert(`account balance is low`)
+    }else{
+         document.getElementById("myBalance").innerText = remingnMyBlance;
+
+    }
+   
+    modalopen();
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <div class="border rounded-lg p-3 ">
+            <h1 class="font-semibold">${fenifInput} Taka is Donate for Flood Relief in Feni,Bangladesh</h1>
+            <p>Date: ${new Date()}</p>
+            </div>`;
+
+    showDonationHistory.appendChild(div);
+
+    document.getElementById("fenifInput").value = "";
   } else {
     modalClose();
   }

@@ -20,28 +20,30 @@
   <body class="">
     <!-- navbar  -->
     <header class="border-b  sticky top-0 z-50">
-      <div class=" bg-[#F9F7F3]">
+      <div class=" bg-[#f9f7f3f2]">
         <div class="navbar container mx-auto py-5 pb-10">
           <div class="navbar-start">
-            <button class="btn md:px-8 font-bold bg-[#B4F461] hover:bg-[#B4F461]">
+            <a href="./html/new.html">
+            <button class="btn px-5 md:px-8 font-bold bg-[#B4F461] hover:bg-[#B4F461]">
               Blog
             </button>
+          </a>
           </div>
           <div class="navbar-center flex justify-center flex-col md:flex-row items-center">
             <img src="./assets/logo.png" class="w-8" alt="" srcset="" />
-            <h1 class="font-semibold  px-2 md:text-xl">
+            <h1 class="font-semibold hidden md:block px-2 md:text-xl">
               Donate Bangladesh
             </h1>
           </div>
-          <div class="navbar-end justify-center md:justify-end">
-            <button class="flex flex-col md:flex-row items-center md:space-x-2 font-semibold">
+          <div class="navbar-end ">
+            <button class="flex  items-center md:space-x-2 font-semibold">
               <img src="./assets/coin.png" alt="" srcset="" />
               <span id="myBalance" class=" px-1 ">5500</span> BDT
             </button>
           </div>
         </div>
       </div>
-      <div class=" backdrop-blur-sm  bg-white/25 flex pt-4  pb-4  md:pt-16 justify-center items-center space-x-5">
+      <div class=" backdrop-blur-sm  bg-white/25 flex pt-4  pb-4  md:py-10 justify-center items-center space-x-5">
         <button
           id="Donation"
           class="btn md:px-10 bg-[#B4F461] hover:bg-[#B4F461] font-semibold text-lg tracking-wide"
@@ -108,14 +110,14 @@
         <!-- card 2 -->
         <div class="card my-5 lg:card-side md:space-x-10 bg-base-100 border p-5">
           <figure>
-            <img class="w-full" src="./assets/feni.png" alt="noakhali" />
+            <img class="w-full" src="./assets/feni.png" alt="feni" />
           </figure>
           <div class="p-5 md:w-[40%]">
             <button
               class="bg-[#1111110D] px-4 my-4 flex items-center space-x-2 p-3 rounded-md"
             >
               <img src="./assets/coin.png" alt="" srcset="" />
-              <p class="px-1">0</p>
+              <p id="feniDonatioamount" class="px-1">600</p>
               BDT
             </button>
 
@@ -131,13 +133,13 @@
               lives of those in need.
             </p>
 
-            <input
+            <input id="fenifInput"
               type="number"
               placeholder="Write Donation Amount"
               class="input my-4 input-bordered w-full"
             />
 
-            <button
+            <button id="fenifBtn"
               class="block btn hover:bg-[#B4F461] bg-[#B4F461] w-full py-3 px-2 rounded-lg font-semibold"
             >
               Donate Now
@@ -159,7 +161,7 @@
               class="bg-[#1111110D] px-4 my-4 flex items-center space-x-2 p-3 rounded-md"
             >
               <img src="./assets/coin.png" alt="" srcset="" />
-              <p class="px-1">0</p>
+              <p class="px-1">1400</p>
               BDT
             </button>
 
