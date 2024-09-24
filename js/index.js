@@ -25,10 +25,7 @@ function modalopen() {
   const Modal = document.getElementById("my_modal_1");
   Modal.showModal();
 }
-function invalidModal() {
-  const Modal = document.getElementById("my_modal_2");
-  Modal.showModal();
-}
+
 
 
 function createElementFun(amount, DonationTitle) {
@@ -99,7 +96,7 @@ document.getElementById("NoakhalifBtn").addEventListener("click", function () {
 
     document.getElementById("NoakhalifInput").value = "";
   } else {
-    invalidModal();
+    alert("Invalid Donatio Amount");
     document.getElementById("NoakhalifInput").value = "";
   }
 });
@@ -132,7 +129,7 @@ document.getElementById("fenifBtn").addEventListener("click", function () {
 
     document.getElementById("fenifInput").value = "";
   } else {
-    invalidModal();
+    alert("Invalid Donatio Amount");
     document.getElementById("fenifInput").value = "";
   }
 });
@@ -168,7 +165,7 @@ document.getElementById("quotaMovementBtn").addEventListener("click", function (
 
     document.getElementById("quotaMovementAid").value = "";
   } else {
-    invalidModal();
+    alert("Invalid Donatio Amount");
     document.getElementById("quotaMovementAid").value = "";
   }
 });
