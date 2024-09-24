@@ -2,10 +2,10 @@ const DonationBtn = document.getElementById("Donation");
 const HistoryBtn = document.getElementById("History");
 const boxContants = document.getElementById("box-contants");
 const showDonationHistory = document.getElementById("showDonationHistory");
-const myBalance = parseInt(document.getElementById("myBalance").innerText);
-const feniDonatioamount = parseInt(document.getElementById('feniDonatioamount').innerText) 
-console.log(feniDonatioamount);
-
+let myBalance = parseInt(document.getElementById("myBalance").innerText);
+const feniDonatioamount = parseInt(
+  document.getElementById("feniDonatioamount").innerText
+);
 
 // common function
 
@@ -13,9 +13,9 @@ function getInputValue(id) {
   return parseInt(document.getElementById(id).value);
 }
 
-NoakhalifInput.addEventListener("input", function () {
-  NoakhalifBtn.removeAttribute("disabled");
-});
+// NoakhalifInput.addEventListener("input", function () {
+//   NoakhalifBtn.removeAttribute("disabled");
+// });
 
 function modalopen() {
   const Modal = document.getElementById("my_modal_1");
@@ -71,16 +71,18 @@ document.getElementById("NoakhalifBtn").addEventListener("click", function () {
   if (NoakhalifInput > 0 && !isNaN(NoakhalifInput)) {
     NoakhaliFundCollectionTotal += NoakhalifInput;
 
-    document.getElementById("NoakhalifDonatioamount").innerText =
-      NoakhaliFundCollectionTotal;
     let remingnMyBlance = myBalance - NoakhalifInput;
-    if (remingnMyBlance < 0) {
-       return alert(`account balance is low`)
-    }else{
-         document.getElementById("myBalance").innerText = remingnMyBlance;
 
+    if (remingnMyBlance < 0) {
+      document.getElementById("NoakhalifInput").value = "";
+      return alert(`account balance is low`);
+    } else {
+      document.getElementById("NoakhalifDonatioamount").innerText =
+        NoakhaliFundCollectionTotal;
+      myBalance = remingnMyBlance;
+      document.getElementById("myBalance").innerText = myBalance;
     }
-   
+
     modalopen();
     const div = document.createElement("div");
     div.innerHTML = `
@@ -97,25 +99,25 @@ document.getElementById("NoakhalifBtn").addEventListener("click", function () {
   }
 });
 
-
 // card-2
-var fenifInputFundCollectionTotal = feniDonatioamount
+var fenifInputFundCollectionTotal = feniDonatioamount;
 document.getElementById("fenifBtn").addEventListener("click", function () {
   let fenifInput = getInputValue("fenifInput");
 
   if (fenifInput > 0 && !isNaN(fenifInput)) {
     fenifInputFundCollectionTotal += fenifInput;
 
-    document.getElementById("feniDonatioamount").innerText =
-    fenifInputFundCollectionTotal;
     let remingnMyBlance = myBalance - fenifInput;
     if (remingnMyBlance < 0) {
-       return alert(`account balance is low`)
-    }else{
-         document.getElementById("myBalance").innerText = remingnMyBlance;
-
+      document.getElementById("fenifInput").value = "";
+      return alert(`account balance is low`);
+    } else {
+      document.getElementById("feniDonatioamount").innerText =
+        fenifInputFundCollectionTotal;
+      myBalance = remingnMyBlance;
+      document.getElementById("myBalance").innerText = myBalance;
     }
-   
+
     modalopen();
     const div = document.createElement("div");
     div.innerHTML = `
