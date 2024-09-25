@@ -19,9 +19,9 @@
   </head>
   <body class="">
     <!-- navbar  -->
-    <header id="header"  class="border-b  sticky top-0 z-50">
-      <div  class="bg-[#f9f7f3f2]">
-        <div class="navbar container mx-auto py-5 ">
+    <header id="header" class="border-b sticky top-0 z-50">
+      <div class="bg-[#f9f7f3f2]">
+        <div class="navbar container mx-auto py-5">
           <div class="navbar-start">
             <a href="./html/blog.html">
               <button
@@ -58,7 +58,7 @@
         </button>
         <button
           id="History"
-          class="btn md:px-10  border-gray-300 font-semibold text-lg tracking-wide"
+          class="btn md:px-10 border-gray-300 font-semibold text-lg tracking-wide"
         >
           History
         </button>
@@ -71,7 +71,9 @@
     <main class="container mx-auto mt-10">
       <div id="box-contants">
         <!-- card 1 -->
-        <div class="card lg:card-side md:space-x-10 bg-base-100 border mx-2 p-5">
+        <div
+          class="card lg:card-side md:space-x-10 bg-base-100 border mx-2 p-5"
+        >
           <figure>
             <img class="w-full" src="./assets/noakhali.png" alt="noakhali" />
           </figure>
@@ -88,7 +90,12 @@
               Donate for Flood at Noakhali, Bangladesh
             </h1>
             <p class="text-justify">
-              The recent floods in Noakhali, Bangladesh have caused severe damage to homes and infrastructure. Your donation will provide essential supplies like food, clean water, and medical aid to those affected people. Every contribution, big or small, makes a significant difference. Please join us in supporting the relief efforts and helping rebuild lives and home soon.
+              The recent floods in Noakhali, Bangladesh have caused severe
+              damage to homes and infrastructure. Your donation will provide
+              essential supplies like food, clean water, and medical aid to
+              those affected people. Every contribution, big or small, makes a
+              significant difference. Please join us in supporting the relief
+              efforts and helping rebuild lives and home soon.
             </p>
 
             <input
@@ -127,7 +134,13 @@
               Donate for Flood Relief in Feni,Bangladesh
             </h1>
             <p class="text-justify">
-              The floods in Feni, Bangladesh have caused extensive damage and displaced many families. Your donation will help provide critical resources such as food, clean water, medical supplies, dress and temporary shelters. Every contribution, no matter the size, plays a vital role in aiding recovery and supporting the affected communities during this challenging time. we are helping them Please your help save their life.
+              The floods in Feni, Bangladesh have caused extensive damage and
+              displaced many families. Your donation will help provide critical
+              resources such as food, clean water, medical supplies, dress and
+              temporary shelters. Every contribution, no matter the size, plays
+              a vital role in aiding recovery and supporting the affected
+              communities during this challenging time. we are helping them
+              Please your help save their life.
             </p>
 
             <input
@@ -170,16 +183,23 @@
               Aid for Injured in the Quota Movement
             </h1>
             <p class="text-justify">
-              we are Bangladeshi student doing the Quota Movement protests. and Support those injured in the Quota Movement protests. Your aid will provide essential medical care, rehabilitation, and support services to help them recover. Every contribution ensures that the injured receive the necessary treatment and assistance to rebuild their lives and regain their health.
+              we are Bangladeshi student doing the Quota Movement protests. and
+              Support those injured in the Quota Movement protests. Your aid
+              will provide essential medical care, rehabilitation, and support
+              services to help them recover. Every contribution ensures that the
+              injured receive the necessary treatment and assistance to rebuild
+              their lives and regain their health.
             </p>
 
-            <input id="quotaMovementAid"
+            <input
+              id="quotaMovementAid"
               type="text"
               placeholder="Write Donation Amount"
               class="input my-4 input-bordered w-full"
             />
 
-            <button id="quotaMovementBtn"
+            <button
+              id="quotaMovementBtn"
               class="block btn hover:bg-[#B4F461] bg-[#B4F461] w-full py-3 px-2 rounded-lg font-semibold"
             >
               Donate Now
@@ -196,7 +216,9 @@
       <!-- Successful model -->
       <dialog id="my_modal_1" class="modal">
         <div class="modal-box text-center">
-          <h3 class=" text-2xl md:text-4xl text-green-500 font-bold">Congrates!</h3>
+          <h3 class="text-2xl md:text-4xl text-green-500 font-bold">
+            Congrates!
+          </h3>
           <div class="flex justify-center mt-3">
             <img src="./assets/coin.png" alt="" srcset="" />
           </div>
@@ -211,29 +233,11 @@
         </div>
       </dialog>
 
-      <!-- alart model -->
-      <dialog id="my_modal_2" class="modal">
-        <div class="modal-box text-center">
-          <h3 class="text-2xl md:text-4xl text-rose-500 font-bold">Sorry!</h3>
-          <div class="flex justify-center mt-3">
-            <img src="./assets/icons8-error-48.png" alt="" srcset="" />
-          </div>
-          <p class="py-4">Invalid input</p>
-          <h1 class="font-bold"> Donation Failed</h1>
-          <div class="modal-action flex-col justify-center">
-            <form method="dialog" class="text-center">
-              <!-- if there is a button in form, it will close the modal -->
-              <button class="btn w-1/2">Close Confirmation</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
       <!-- modal end -->
-
     </main>
     <!-- mian end -->
 
-    <footer class="bg-orange-50 h-12 " ></footer>
+    <footer class="bg-orange-50 h-12"></footer>
     <script src="./js/index.js"></script>
   </body>
 </html>
